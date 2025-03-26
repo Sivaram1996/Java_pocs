@@ -1,0 +1,42 @@
+create (p:Person {name:"Alice", age:30})
+
+create (:City {name:"London"})
+
+create (:Movie {title:"Inception"})
+
+create (:Book {title:"1984", author:"George Orwell"})
+
+create (p1:Person {name:"Bob"}) -[:FRIENDS_WITH]-> (p2:Person {name:"Alice"})
+
+create (:Person {name:"Charlie"}) -[:LIVES_IN]-> (:City {name:"London"})
+
+create (:Person {name:"David"}) -[:RATED {rating:8}]-> (:Movie {name:"Inception"})
+
+create (:Person {name:"Eve"}) -[:READ]-> (:Book {title:"1984"})
+
+CREATE (:Person {name: "Frank", age: 25, city: "Paris"})
+
+CREATE (:Product {id: 1, name: "Laptop"})
+
+MATCH (p:Person) RETURN p
+
+match (c:City) where c.name="London" return c
+
+match (m:Movie) return m.title
+
+match (p:Person) -[:FRIENDS_WITH]-> (f:Person) return p.name, f.name
+
+match (p:Person) -[:LIVES_IN]-> (c:City) return p.name, c.name
+
+match (p:Person) -[r:RATED]-> (m:Movie) return p.name, m.name, r.ratings
+
+match (b:Book) where b.author contains "George" return b.title
+
+match (p:Person) where p.age > 28 return p.name
+
+MATCH (p:Person {name: "Alice"})-[r]->(n) RETURN type(r), n
+
+match (p:Person) -[r:RATED]-> (m:Movie) return avg(r.rating)
+
+
+
