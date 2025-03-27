@@ -1,0 +1,56 @@
+{
+  "components": [
+    {
+      "label": "Write request for help",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1c034c0",
+        "columns": null
+      },
+      "id": "Field_1twppmm",
+      "key": "helpNote",
+      "description": "Say something convincing",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Book to pack",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0uw23ce",
+        "columns": null
+      },
+      "id": "Field_1ve1jxd",
+      "key": "book",
+      "description": "What book would you like to carry ?",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Ask for help",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1wnqvj1",
+        "columns": null
+      },
+      "id": "Field_1njpsld",
+      "key": "help",
+      "description": "Who do you want to help?",
+      "validate": {
+        "required": true,
+        "pattern": "Alice|Norway"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wljw5h",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.33.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 18
+}
